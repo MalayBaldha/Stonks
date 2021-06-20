@@ -3,9 +3,15 @@ from django.http import HttpResponse
 
 def home(request):
     return render(request, 'accounts/stonks.html')
+def login(request):
+    return render(request, 'accounts/login.html')
+def about(request):
+    return render(request, 'accounts/about.html')
 def contact(request):
-    return HttpResponse('Contact page')
+    return render(request, 'accounts/contact.html')
+def terms(request):
+    return render(request, 'accounts/terms.html')
+def signup(request):
+    return render(request, 'accounts/signup.html')
 
-def customers(request):
-    return HttpResponse('Customer page')
 # Create your views here.
