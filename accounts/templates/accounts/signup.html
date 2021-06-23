@@ -1,4 +1,5 @@
 {% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -64,10 +65,10 @@
             align-items: center;
             justify-content: center;
             font-size: 18px;
-            background-image: linear-gradient(rgba(75,0,130,0.3),rgba(255, 220, 66, 0.3)),url({% static 'images/08.jpg' %});
+            background-image: linear-gradient(rgba(75,0,130,0.3),rgba(255, 220, 66, 0.3)),url("{% static '/images/08.jpg' %}");
             background-size: cover;
         }
     </style>
-    <script src="login.js"></script>
+    <!--<script src="login.js"></script> -->
 </body>
 </html>

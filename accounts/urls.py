@@ -8,5 +8,9 @@ urlpatterns = [
     path('contact/', views.contact, name='contact'),
     path('about/', views.about, name='about'),
     path('signup/', views.signup, name='signup'),
+
+    
+    path('client/<str:ID>/', views.client, name='client'),
+    path('broker/<str:ID>/', views.broker, name='broker'),
 ]
 
