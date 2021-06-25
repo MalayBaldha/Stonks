@@ -145,6 +145,7 @@ h1{
 }
 
 .form__button {
+    transform:translate(50%,50%) ;
     width: 100%;
     padding: 1rem 2rem;
     font-weight: bold;

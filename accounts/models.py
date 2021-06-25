@@ -9,6 +9,7 @@ class Client(models.Model):
     Portfolio_ID = models.CharField(max_length = 15)
     PAN = models.CharField(max_length = 14)
     data_created = models.DateTimeField(auto_now_add = True)
+    Password = models.CharField(max_length=20,default="1234")
 
     def __str__(self):
         return f"{self.CID} {self.Name}"

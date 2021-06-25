@@ -8,7 +8,17 @@ def home(request):
     return render(request, 'accounts/stonks.html')
 
 def login(request):
-    return render(request, 'accounts/login.html')
+    '''if request.method=="POST":
+        email = request.POST.get('email')
+        password = request.POST.get('password')
+        client = Client.objects.get(Email = email)
+        if Client.objects.get(Email = email,Password = password) == 1:
+            return HttpResponseRedirect(reverse('accounts:client',args(email)))
+        else:
+            return render(request, 'accounts/login.html')
+    else:'''
+    client = Client.objects.get(id = 5)
+    return render(request, 'accounts/login.html',{'client':client})        
 
 def signup(request):
     return render(request, 'accounts/signup.html')
@@ -38,9 +48,9 @@ def broker(request, ID):
     clients = broker.client_broker_set.all()
     cnt_cli = broker.client_broker_set.all().count()
     
-    for C in clients:
-        cr = C.CID.id
-        stocks = Stock.objects.get(id = cr)
+    
 
-    context = {'broker': broker, 'clients': clients, "cnt_cli": cnt_cli, 'stocks': stocks}
+    context = {'broker': broker, 'clients': clients, "cnt_cli": cnt_cli}
     return render(request, 'accounts/broker.html', context)
+
+
